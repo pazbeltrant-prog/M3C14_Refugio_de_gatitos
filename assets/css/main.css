@@ -1,0 +1,35 @@
+/* ==============================
+   TÍTULOS DE SECCIÓN
+============================== */
+.titulo-michis {
+    color: #5b7d88;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* ==============================
+   CARRUSEL
+============================== */
+#michiSlider {
+    margin-bottom: 2rem;
+}
+
+.carousel-item {
+    transition: transform 1s ease-in-out;
+}
+
+/* ==============================
+   SECCIÓN HISTORIA
+============================== */
+#nuestra-historia {
+    background-color: var(--primary-michis);
+    text-align: justify;
+}
+
+
+/* ==============================
+   SECCIÓN ADOPCIÓN
+============================== */
+#como-adoptar {
+    background-color: var(--secondary-michis);
+}

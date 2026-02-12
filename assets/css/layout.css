@@ -1,0 +1,118 @@
+/* ==============================
+   NAVBAR
+============================== */
+.navbar-michis {
+    background-color: white;
+    padding: 0.8rem 0;
+    border-bottom: 2px solid var(--primary-michis);
+}
+
+.navbar-nav .nav-link {
+    color: var(--text-light-michis) !important;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background-color: var(--primary-michis);
+    color: var(--text-dark-michis) !important;
+}
+
+/* ==============================
+   HERO 
+============================== */
+
+
+@media (min-width: 992px) {
+    .hero-section {
+        background-attachment: fixed;
+    }
+}
+
+
+
+.hero-section {
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)),
+        url('../img/hero_gato.jpg');
+    background-size: cover;
+    background-position: center 5%;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero-section {
+    background-attachment: fixed;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Marco de imagen */
+.canva-embed-container {
+    border: 4px solid var(--accent-michis);
+    border-radius: 20px;
+    background: white;
+    padding: 8px;
+    transition: transform 0.3s ease;
+}
+
+.canva-embed-container:hover {
+    transform: translateY(-8px);
+}
+
+/* ==============================
+   FOOTER
+============================== */
+.footer-michis {
+    background-color: #2D2335;
+    color: #e0bbe4;
+    padding: 3rem 0;
+}
+
+.footer-link,
+.social-link {
+    color: #d291da !important;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-link:hover {
+    color: white !important;
+    padding-left: 6px;
+}
+
+.social-link:hover {
+    transform: scale(1.2);
+}
+
+
+
+
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 40px; /* más alto */
+    right: 30px;
+    z-index: 999;
+    background-color: var(--primary-michis) !important;
+    border: none;
+}
+
+/* Cuando esté cerca del footer */
+.footer-visible #scrollToTopBtn {
+    bottom: 120px; /* lo empuja hacia arriba */
+}

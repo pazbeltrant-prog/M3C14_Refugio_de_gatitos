@@ -1,0 +1,42 @@
+/* ==============================
+   VARIABLES GATUNAS PASTEL
+============================== */
+:root {
+    --color-logo: #9d78b1;
+    --color-titulos-card: #ff9aa2;
+    --color-texto-base: #6d6d6d;
+
+    --primary-michis: #fce4ec;
+    --secondary-michis: #fff1e6;
+    --accent-michis: #b5ead7;
+
+    --text-dark-michis: #4a4a4a;
+    --text-light-michis: #7a7a7a;
+}
+
+/* ==============================
+   FUENTES
+============================== */
+@font-face {
+    font-family: 'CatMeow';
+    src: url('../fonts/cat_ttf.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    color: var(--text-dark-michis);
+    line-height: 1.7;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+}
+
+.logo-michis,
+.logo-michis-footer {
+    font-family: 'CatMeow', sans-serif !important;
+    color: var(--color-logo);
+}
