@@ -74,6 +74,43 @@
 }
 
 /* ==============================
+   FOMULARIO
+============================== */
+/* Estilos extra para el formulario */
+.bg-secondary-michis {
+    background-color: var(--secondary-michis);
+}
+
+.border-michis {
+    border: 2px solid #f8d7da; /* Un tono rosado suave */
+    padding: 0.75rem 1.25rem;
+}
+
+.border-michis:focus {
+    border-color: var(--color-logo);
+    box-shadow: 0 0 0 0.25rem rgba(157, 120, 177, 0.25);
+    outline: 0;
+}
+
+.titulo-michis {
+    color: var(--color-logo);
+}
+
+/* Reutilizando tu clase custom-btn si no la tienes definida */
+.custom-btn {
+    background-color: var(--color-logo);
+    color: white;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #8a66a0;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* ==============================
    FOOTER
 ============================== */
 .footer-michis {

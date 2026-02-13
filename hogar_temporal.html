@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hogar Temporal | El Señor de los Michis 🐾</title>
+   
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* 1. FUENTE PERSONALIZADA */
+        @font-face {
+            font-family: 'CatMeow';
+            src: url('./assets/fonts/cat_ttf.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        /* 2. VARIABLES DE COLOR (Gatunos y equilibrados) */
+        :root {
+    /*  Paleta Gatuna Pastel  */
+        --michi-purple-deep: #6b5ca5;   /* Morado suave para títulos */
+        --michi-violet: #b8a4e3;        /* Lila pastel principal */
+        --michi-lavender: #efe9ff;      /* Lavanda ultra suave */
+        --michi-bg-soft: #fcfaff;       /* Fondo casi blanco con tinte lila */
+        --michi-dark-footer: #3f3566;   /* Morado grisáceo suave (no pesado) */
+        --michi-hover-bg: rgba(184, 164, 227, 0.18); /* Hover pastel */
+}
+        /* 3. ESTILOS BASE */
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--michi-bg-soft);
+            color: var(--michi-dark-footer);
+        }
+
+        h1, h2, h3, h4, .navbar-brand {
+            font-family: 'Comfortaa', sans-serif;
+            font-weight: 700;
+        }
+
+        /* 4. CLASE UNIFICADA PARA EL LOGO (Evita que se encimen letras) */
+        .fuente-michi-nombre {
+            font-family: 'CatMeow', 'Comfortaa', sans-serif !important;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            line-height: 1.4; /* Espacio vital para que no choquen las letras */
+            display: inline-block;
+            vertical-align: middle;
+            transition: all 0.3s ease;
+        }
+
+        /* 5. NAVBAR (Hover suave y estilo limpio) */
+       .navbar-michis {
+        background-color: #ffffff;
+        padding: 0.8rem 0;
+        border-bottom: 2px solid var(--michi-lavender);
+        box-shadow: 0 4px 15px rgba(184, 164, 227, 0.15);
+}
+
+        .navbar-brand .fuente-michi-nombre {
+            color: var(--michi-purple-deep) !important;
+        }
+
+        .navbar-brand:hover .fuente-michi-nombre {
+            color: var(--michi-violet) !important;
+            transform: scale(1.02);
+        }
+
+        .nav-link {
+            color: var(--michi-purple-deep);
+            font-weight: 600;
+            padding: 10px 15px !important;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--michi-violet);
+            background-color: var(--michi-hover-bg);
+        }
+
+        .nav-link.active {
+            color: var(--michi-violet) !important;
+            font-weight: 700;
+        }
+
+        /* 6. CONTENIDO PRINCIPAL */
+        .titulo-michis {
+        color: #7c6bb3; /* morado pastel legible */
+        margin-bottom: 1.5rem;
+}
+
+        .bg-light-michi {
+            background-color: white;
+            border: 2px dashed var(--michi-lavender);
+            border-radius: 20px;
+        }
+
+        .card {
+        border-radius: 20px;
+        border: 1px solid #eee8ff;
+        box-shadow: 0 8px 25px rgba(184, 164, 227, 0.18);
+        background-color: #ffffff;
+
+}
+.custom-btn {
+    background-color: #c7b6f5; /* lila pastel gatuno */
+    color: #3f3566;
+    border-radius: 50px;
+    padding: 12px;
+    font-weight: 600;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: #b19cf0;
+    color: #2f2555;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(177, 156, 240, 0.35);
+}
+
+       
+
+        /* 7. FOOTER (Ajustado para no verse pesado) */
+      .footer-michis {
+        background-color: #4b3f7a; /* morado suave, no negro */
+        color: #f3efff;
+        padding: 60px 0 30px 0 !important;
+}
+
+        .footer-michis .fuente-michi-nombre {
+            color: var(--michi-lavender) !important;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+      .footer-michis p.small {
+       color: #ddd6ff; /* lila clarito, más suave */
+
+    }
+
+        .footer-michis h5 {
+            color: white;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--michi-violet);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-link {
+            color: #b39ddb;
+            text-decoration: none;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .footer-link:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+
+        .michi-toast {
+            background-color: var(--michi-purple-deep) !important;
+            color: white !important;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-michis sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="me-2">🐾</span>
+                <span class="fuente-michi-nombre">El Señor de los Michis</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link mx-1" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link mx-1" href="index.html#adopta-aqui">Adopta</a></li>
+                    <li class="nav-item"><a class="nav-link mx-1 active" href="hogar_temporal.html">Hogar Temporal</a></li>
+                    <li class="nav-item"><a class="nav-link mx-1" href="voluntariado.html">Voluntariado</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-5">
+                <h2 class="titulo-michis">Ser Hogar Temporal 🏠</h2>
+                <p class="lead">Ser HT significa salvar una vida mientras el michi espera a su familia definitiva.</p>
+                <div class="bg-light-michi p-4 shadow-sm mb-4">
+                    <h5 class="fw-bold" style="color: var(--michi-violet);"><i class="bi bi-check2-circle me-2"></i>Requisitos:</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2">🏠 Vivir en casa/depto con mallas de seguridad.</li>
+                        <li class="mb-2">🐈 Tener una habitación para aislamiento inicial.</li>
+                        <li class="mb-2">🏥 Disponibilidad para controles veterinarios.</li>
+                        <li class="mb-2">💖 Mucho amor y paciencia.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card p-4 shadow-lg border-0">
+                    <h4 class="mb-4 fw-bold" style="color: var(--michi-purple-deep);">Formulario de Postulación HT</h4>
+                    <form id="formHT">
+                        <div class="mb-3">
+                            <label class="form-label fw-600">Nombre Completo</label>
+                            <input type="text" class="form-control" id="nombre" required
+                                   pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"
+                                   placeholder="Tu nombre">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-600">Teléfono</label>
+                                <input type="tel" class="form-control" id="telefono" required placeholder="+56 9...">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-600">Región</label>
+                                <select class="form-select" id="region" required>
+                                    <option value="">Selecciona...</option>
+                                    <option>Metropolitana</option>
+                                    <option>Valparaíso</option>
+                                    <option>O'Higgins</option>
+                                    </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-600">Comuna</label>
+                            <input type="text" class="form-control" id="comuna" required placeholder="Tu comuna">
+                        </div>
+                        <div class="mb-4">
+                            <label class="form-label fw-bold">¿Tienes otras mascotas?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mascotas" id="si" required>
+                                <label class="form-check-label" for="si">Sí, tengo michis o perritos</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="mascotas" id="no">
+                                <label class="form-check-label" for="no">No tengo</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn custom-btn w-100">Postular como Hogar Temporal</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-michis py-5 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3">🐾 <span class="fuente-michi-nombre">El Señor de los Michis</span></h5>
+                    <p class="small">Dando segundas oportunidades desde 2026.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3">Explora</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="footer-link">Inicio</a></li>
+                        <li class="mb-2"><a href="voluntariado.html" class="footer-link">Voluntariado</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="text-white mb-3">Contacto</h5>
+                    <p class="small mb-1"><i class="bi bi-geo-alt me-2"></i>Calle Ronroneo 123, Ciudad Michi.</p>
+                    <p class="small"><i class="bi bi-envelope me-2"></i>contacto@elsenordelosmichis.cl</p>
+                </div>
+            </div>
+            <hr class="mt-4 border-secondary">
+            <p class="text-center small mb-0 opacity-50">© 2026 El Señor de los Michis. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('formHT').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('¡Miau-ravilloso! Tu solicitud ha sido enviada.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

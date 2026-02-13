@@ -67,7 +67,7 @@
 </section>
 <!--fin del hero-->
 
-                
+<!--historia-->                
             </div>
         </div>
     </div>
@@ -78,7 +78,7 @@
                 <h2 class="text-center mb-5 titulo-michis">Nuestra Historia 🐾</h2>
                 <div class="row align-items-center">
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <img src="https://i.pinimg.com/736x/87/40/59/8740590a36a28290533bb27694f41b4e.jpg" alt="Historia del Refugio" class="img-fluid rounded-4 shadow-sm">
+                        <img src="https://assets-global.website-files.com/66181096a94e4ba7436104c9/66214dac916ef7cafbc30fbc_14438564-p-1080.jpg" alt="Historia del Refugio" class="img-fluid rounded-4 shadow-sm">
                     </div>
                     <div class="col-lg-6">
                         <p>Todo comenzó con un pequeño felino rescatado de las calles, solo y asustado. Ese día nació la visión de El Señor de los Michis: un refugio seguro donde cada gato, sin importar su pasado, pudiera encontrar una segunda oportunidad.</p>
@@ -89,7 +89,7 @@
                 </div>
             </div>
         </section>
-
+<!--Adopta aquí-->
         <section id="adopta-aqui" class="py-5">
             <div class="container">
                 <h2 class="text-center mb-5 titulo-michis">Historias de Nuestros Michis en Adopción 🐾</h2>
@@ -236,7 +236,104 @@
                     </div>
                 </div> </div>
         </section>
+        <!--Formulario de adopción-->
+ <section id="formulario-adopcion" class="py-5 bg-secondary-michis">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm rounded-4 p-4 p-md-5">
+                    <h2 class="text-center mb-4 titulo-michis">Solicitud de Adopción 📝</h2>
+                    <p class="text-center text-muted mb-5">Completa tus datos y nos pondremos en contacto contigo.</p>
+                    
+                    <form action="#" method="POST" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-12">
+                                <label for="nombre" class="form-label fw-bold">Nombre Completo</label>
+                                <input type="text" 
+                                       class="form-control rounded-pill border-michis" 
+                                       id="nombre" 
+                                       name="nombre" 
+                                       placeholder="Ej: Frodo Bolsón" 
+                                       pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$" 
+                                       required>
+                                <div class="invalid-feedback ms-3">Por favor, ingresa un nombre válido (solo letras).</div>
+                            </div>
 
+                            <div class="col-md-12">
+                                <label for="correo" class="form-label fw-bold">Correo Electrónico</label>
+                                <input type="email" 
+                                       class="form-control rounded-pill border-michis" 
+                                       id="correo" 
+                                       name="correo" 
+                                       placeholder="example@correo.com" 
+                                       required>
+                                <div class="invalid-feedback ms-3">Ingresa un correo electrónico válido.</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="region" class="form-label fw-bold">Región</label>
+                                <select class="form-select rounded-pill border-michis" id="region" name="region" required>
+                                    <option value="" selected disabled>Selecciona tu región...</option>
+                                    <option value="arica">Región de Arica y Parinacota</option>
+                                    <option value="tarapaca">Región de Tarapacá</option>
+                                    <option value="antofagasta">Región de Antofagasta</option>
+                                    <option value="atacama">Región de Atacama</option>
+                                    <option value="coquimbo">Región de Coquimbo</option>
+                                    <option value="valparaiso">Región de Valparaíso</option>
+                                    <option value="metropolitana">Región Metropolitana</option>
+                                    <option value="ohiggins">Región de O'Higgins</option>
+                                    <option value="maule">Región del Maule</option>
+                                    <option value="nuble">Región del Ñuble</option>
+                                    <option value="biobio">Región del Biobío</option>
+                                    <option value="araucania">Región de la Araucanía</option>
+                                    <option value="rios">Región de los Ríos</option>
+                                    <option value="lagos">Región de los Lagos</option>
+                                    <option value="aysen">Región de Aysén</option>
+                                    <option value="magallanes">Región de Magallanes</option> </select>
+                                <div class="invalid-feedback ms-3">Selecciona una región.</div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="ciudad" class="form-label fw-bold">Ciudad</label>
+                                <input type="text" 
+                                       class="form-control rounded-pill border-michis" 
+                                       id="ciudad" 
+                                       name="ciudad" 
+                                       placeholder="Tu ciudad" 
+                                       pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$"
+                                       required>
+                                <div class="invalid-feedback ms-3">Ingresa una ciudad válida.</div>
+                            </div>
+
+                            <div class="col-md-12">
+                                <label for="michi-interes" class="form-label fw-bold">¿Qué michi quieres adoptar?</label>
+                                <select class="form-select rounded-pill border-michis" id="michi-interes" name="michi-interes" required>
+                                    <option value="" selected disabled>Selecciona un gatito...</option>
+                                    <option value="cleo">Cleo</option>
+                                    <option value="simba">Simba</option>
+                                    <option value="nala">Nala</option>
+                                    <option value="gandalf">Gandalf</option>
+                                    <option value="mochi">Mochi</option>
+                                    <option value="frodo">Frodo</option>
+                                </select>
+                                <div class="invalid-feedback ms-3">Debes elegir un michi.</div>
+                            </div>
+
+                            <div class="col-12 text-center mt-4">
+                                <button type="submit" class="btn custom-btn btn-lg px-5 rounded-pill shadow-sm">
+                                    Enviar Solicitud <i class="bi bi-send ms-2"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Fin de Formulario de adopción-->
+
+<!--Requisitos de adopción-->
         <section id="como-adoptar" class="py-5">
             <div class="container">
                 <h2 class="text-center mb-5 titulo-michis">¿Cómo Adoptar? Tu Guía Paso a Paso </h2>
@@ -306,6 +403,8 @@
             </div>
         </section>
     </main>
+
+
 
   <footer class="footer-michis py-5 mt-5">
         <div class="container">
