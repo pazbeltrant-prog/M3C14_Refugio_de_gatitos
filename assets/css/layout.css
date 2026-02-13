@@ -96,6 +96,14 @@
     color: var(--color-logo);
 }
 
+.contenedor-solicitud {
+    height: fit-content; 
+}
+.propiedad-del-padre-grid {
+    display: grid;
+    align-items: start; /* Alinea todos los elementos al inicio de su celda */
+}
+
 /* Reutilizando tu clase custom-btn si no la tienes definida */
 .custom-btn {
     background-color: var(--color-logo);
