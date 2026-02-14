@@ -96,8 +96,20 @@
     color: var(--color-logo);
 }
 
-.contenedor-solicitud {
-    height: fit-content; 
+/* 1. Evita que la columna se estire */
+#adopcion-container .row {
+    align-items: flex-start; /* Hace que cada cuadro use solo su altura necesaria */
+}
+
+/* 2. Quita el h-100 del card para que no force la altura */
+#adopcion-container .card.h-100 {
+    height: auto !important; 
+}
+
+/* 3. Evita que el Navbar tape el título al bajar */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Ajusta según el alto de tu navbar */
 }
 .propiedad-del-padre-grid {
     display: grid;

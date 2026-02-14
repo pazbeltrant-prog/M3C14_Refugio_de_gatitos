@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Refugio de gatos El Señor de los Michis - Adopción responsable y amor felino">
+    <meta name="author" content="Chikisaurias Malvadas & Asoc.">
     <title>El Señor de los Michis 🐾 | Refugio Gatuno</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -16,149 +18,183 @@
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/objects.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/utilities.css">
+
+    <style>
+        /* Ajuste preventivo para el botón ScrollToTop con tu JS */
+        #scrollToTopBtn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1050;
+            width: 50px;
+            height: 50px;
+            transition: all 0.3s ease;
+        }
+        /* Clase que añade tu JS cuando el footer es visible */
+        body.footer-visible #scrollToTopBtn {
+            bottom: 100px; /* Sube para no tapar el footer */
+        }
+    </style>
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarNavMichis">
 
-    <nav class="navbar navbar-expand-lg navbar-michis sticky-top shadow-sm">
-    <div class="container">
-        <a class="navbar-brand logo-michis" href="index.html"> <span class="icon-cat"></span> El Señor de los Michis
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMichis" aria-controls="navbarNavMichis" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavMichis">
-            <ul class="navbar-nav ms-auto text-center">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#nuestra-historia">Nuestra Historia</a></li>
-                <li class="nav-item"><a class="nav-link" href="index.html#adopta-aqui">¡Adopta Aquí!</a></li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarParticipa" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Participa
-                    </a>
-                    <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="navbarParticipa">
-                        <li><a class="dropdown-item" href="hogar_temporal.html">Hogar Temporal</a></li>
-                        <li><a class="dropdown-item" href="voluntariado.html">Voluntariado</a></li>
-                        <li><a class="dropdown-item" href="laboral.html">Laboral</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="index.html#como-adoptar">¿Cómo Adoptar?</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
-
-    <main>
-
-        <!--hero-->
-     <section id="inicio" class="hero-section">
-    <div class="hero-overlay">
+    <nav class="navbar navbar-expand-lg navbar-michis sticky-top shadow-sm py-3">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h1>¡Salva un Michi, Salva una Historia!</h1>
-                    <p class="lead">Encuentra a tu compañero felino ideal y dale un hogar lleno de amor.</p>
-                    <a href="#adopta-aqui" class="btn custom-btn btn-lg">
-                        Conoce a Nuestros Michis
-                    </a>
+            <a class="navbar-brand logo-michis d-flex align-items-center" href="index.html">
+                <i class="bi bi-cat-fill me-2"></i> El Señor de los Michis
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavMichis" aria-controls="navbarNavMichis" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavMichis">
+                <ul class="navbar-nav ms-auto gap-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nuestra-historia">Nuestra Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#adopta-aqui">¡Adopta Aquí!</a>
+                    </li>         
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarParticipa" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Participa
+                        </a>
+                        <ul class="dropdown-menu border-0 shadow-sm" aria-labelledby="navbarParticipa">
+                            <li><a class="dropdown-item" href="hogar_temporal.html">Hogar Temporal</a></li>
+                            <li><a class="dropdown-item" href="voluntariado.html">Voluntariado</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="donaciones.html">Donaciones</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#adopcion-container">¿Cómo Adoptar?</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero-section d-flex align-items-center position-relative overflow-hidden">
+        <div class="hero-overlay position-absolute w-100 h-100"></div>
+        <div class="container position-relative z-1">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-white py-5">
+                    <h1 class="display-1 fw-bold mb-4 animate__animated animate__fadeInDown">¡Salva un Michi, Salva una Historia!</h1>
+                    <p class="lead mb-5 fs-3 opacity-90">Encuentra a tu compañero felino ideal y dale un hogar lleno de amor. No solo cambias su mundo, ellos cambian el tuyo con cada ronroneo.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#adopta-aqui" class="btn custom-btn btn-lg px-5 py-3 shadow-lg">Conoce a Nuestros Michis</a>
+                        <a href="#adopcion-container" class="btn btn-outline-light btn-lg px-4 py-3 rounded-pill border-2">Proceso de Adopción</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!--fin del hero-->
+    </header>
 
-<!--historia-->                
-            </div>
-        </div>
-    </div>
-</section>
-
-        <section id="nuestra-historia" class="py-5 bg-light-michis">
-            <div class="container">
-                <h2 class="text-center mb-5 titulo-michis">Nuestra Historia 🐾</h2>
-                <div class="row align-items-center">
+    <main>
+        <section id="nuestra-historia" class="py-5 section-spacing">
+            <div class="container py-lg-5">
+                <div class="row align-items-center g-5">
                     <div class="col-lg-6 mb-4 mb-lg-0">
-                        <img src="https://assets-global.website-files.com/66181096a94e4ba7436104c9/66214dac916ef7cafbc30fbc_14438564-p-1080.jpg" alt="Historia del Refugio" class="img-fluid rounded-4 shadow-sm">
+                        <div class="position-relative">
+                            <img src="https://assets-global.website-files.com/66181096a94e4ba7436104c9/66214dac916ef7cafbc30fbc_14438564-p-1080.jpg" alt="Historia del Refugio" class="img-fluid rounded-5 shadow-2xl historia-img">
+                            <div class="position-absolute top-0 start-0 m-4 bg-michis p-3 rounded-circle shadow">
+                                <i class="bi bi-heart-fill text-white fs-3"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-lg-6">
-                        <p>Todo comenzó con un pequeño felino rescatado de las calles, solo y asustado. Ese día nació la visión de El Señor de los Michis: un refugio seguro donde cada gato, sin importar su pasado, pudiera encontrar una segunda oportunidad.</p>
-                        <p>Desde entonces, hemos crecido gracias al amor de nuestra comunidad y el incansable trabajo de nuestros voluntarios. Creemos firmemente en el poder de una patita para cambiar vidas, tanto la de un michi como la de una familia.</p>
-                        <p>Nuestra misión es clara: rescatar, rehabilitar y reubicar a cada gato en un hogar definitivo, asegurando que su reinado de ronroneos y juegos sea eterno.</p>
-                        <p>Algunos creen que solo un gran poder puede mantener a raya al mal. Pero eso no es lo que yo he encontrado. He descubierto que son las cosas pequeñas. Los actos cotidianos de la gente común que mantienen a la oscuridad a raya, adoptar un michi hoy puede salvar no solo su vida sino la tuya</p>
+                        <h2 class="titulo-michis text-start mb-4 display-4">Nuestra Michi Historia 🐾</h2>
+                        <div class="historia-texto pe-lg-5">
+                            <p class="mb-4">Todo comenzó con un pequeño felino rescatado de las calles, solo y asustado en una noche de lluvia. Ese pequeño encuentro cambió nuestra perspectiva para siempre y así nació la visión de <strong>El Señor de los Michis</strong>.</p>
+                            <p class="mb-4">Desde entonces, hemos crecido gracias al amor de nuestra comunidad y el trabajo de voluntarios. Creemos firmemente en el poder de una patita para cambiar vidas, tanto la de un michi como la de una familia.</p>
+                            <p class="mb-4">Nuestra misión es clara: rescatar, rehabilitar y reubicar a cada gato en un hogar definitivo, asegurando que su reinado de ronroneos sea eterno y lleno de paz.</p>
+                            
+                            <div class="p-4 bg-light border-start border-5 border-info rounded-4 mt-5">
+                                <p class="fst-italic mb-0 text-muted">
+                                    "Algunos creen que solo un gran poder puede mantener a raya al mal. Pero eso no es lo que yo he encontrado. He descubierto que son las cosas pequeñas. Los actos cotidianos de la gente común que mantienen a la oscuridad a raya... adoptar un michi hoy puede salvar no solo su vida sino la tuya."
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-<!--Adopta aquí-->
-        <section id="adopta-aqui" class="py-5">
-            <div class="container">
-                <h2 class="text-center mb-5 titulo-michis">Historias de Nuestros Michis en Adopción 🐾</h2>
-               
-                <div id="michiSlider" class="carousel slide" data-bs-ride="carousel" data-bs-pause="hover" data-bs-interval="3000">
+
+        <section id="adopta-aqui" class="py-5 bg-michis-light position-relative">
+            <div class="container py-5">
+                <div class="text-center mb-5">
+                    <h2 class="titulo-michis display-4">Historias de Nuestros Michis 🐾</h2>
+                    <p class="text-muted fs-5">Ellos están esperando por una familia. ¿Serás tú?</p>
+                </div>
+
+                <div id="michiSlider" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
-                       
+                        
                         <div class="carousel-item active">
-                            <div class="row g-4">
+                            <div class="row g-4 px-lg-5">
                                 <div class="col-md-4">
-                                    <div class="card card-michi h-100 shadow-sm border-0">
-                                        <div class="michi-img-container">
+                                    <div class="card card-michi h-100 border-0 shadow-sm hover-up">
+                                        <div class="michi-img-container overflow-hidden position-relative">
                                             <img src="https://d339b5nop2tkmp.cloudfront.net/uploads/pictures/3689/content_Cleo-1079209-GiveAKittyAHome.jpg" class="card-img-top" alt="Cleo">
+                                            <span class="badge position-absolute top-0 end-0 m-3 bg-white text-dark shadow-sm px-3 rounded-pill">Hembra</span>
                                         </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title-michis">Cleo </h5>
-                                            <div class="mb-2">
-                                                <span class="badge badge-genero">Hembra</span>
-                                                <span class="badge badge-edad">2 años</span>
+                                        <div class="card-body p-4">
+                                            <h3 class="card-title-michis h4">Cleo</h3>
+                                            <div class="mb-3">
+                                                <span class="badge badge-edad py-2 px-3">2 años</span>
+                                                <span class="badge bg-soft-info py-2 px-3 text-dark">Dócil</span>
                                             </div>
-                                            <ul class="list-unstyled small mb-3">
-                                                <li><i class="bi bi-person-heart"></i> <strong>Niños:si </strong> <span class="badge badge-ninos">Apto</span></li>
-                                                <li><i class="bi bi-paw"></i> <strong>Mascotas:no</strong> <span class="badge badge-mascotas">Sí</span></li>
-                                                <li><i class="bi bi-egg-fried"></i> <strong>Alergias:pollo</strong> <span class="badge badge-alergia">Ninguna</span></li>
+                                            <p class="card-text text-muted small">Cleo llegó tímida, pero descubrió que los abrazos son más fuertes que el miedo. Es una gata faldera experta en ronroneos.</p>
+                                            <ul class="list-unstyled small mb-4 text-secondary">
+                                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Apta para niños</li>
+                                                <li><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Alergia al pollo</li>
                                             </ul>
-                                            <p class="card-text small text-muted">Muy cariñosa y faldera. Cleo llegó tímida, pero descubrió que los abrazos son más fuertes que el miedo.</p>
-                                            <button class="btn btn-primary w-100 custom-btn btn-sm">Adoptarme</button>
+                                            <button class="btn custom-btn w-100 py-2 shadow-sm">Adoptarme</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="card card-michi h-100 shadow-sm border-0">
-                                        <div class="michi-img-container">
+                                    <div class="card card-michi h-100 border-0 shadow-sm hover-up">
+                                        <div class="michi-img-container overflow-hidden position-relative">
                                             <img src="https://static.boredpanda.com/blog/wp-content/uploads/2022/12/639878794ed2d_25qhghsr9j3a1__700.jpg" class="card-img-top" alt="Simba">
+                                            <span class="badge position-absolute top-0 end-0 m-3 bg-white text-dark shadow-sm px-3 rounded-pill">Macho</span>
                                         </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title-michis">Simba </h5>
-                                            <div class="mb-2">
-                                                <span class="badge badge-genero">Macho</span>
-                                                <span class="badge badge-edad">4 años</span>
+                                        <div class="card-body p-4">
+                                            <h3 class="card-title-michis h4">Simba</h3>
+                                            <div class="mb-3">
+                                                <span class="badge badge-edad py-2 px-3">4 años</span>
+                                                <span class="badge bg-soft-warning py-2 px-3 text-dark">Activo</span>
                                             </div>
-                                            <ul class="list-unstyled small mb-3">
-                                                <li><i class="bi bi-person-heart"></i> <strong>Niños:no</strong> <span class="badge badge-ninos">Solo adultos</span></li>
-                                                <li><i class="bi bi-paw"></i> <strong>Mascotas:si</strong> <span class="badge badge-mascotas">No</span></li>
-                                                <li><i class="bi bi-egg-fried"></i> <strong>Alergias:no</strong> <span class="badge badge-alergia">Pescado</span></li>
+                                            <p class="card-text text-muted small">Es pura energía. Ama observar por la ventana y es un romántico total cuando entra en confianza con su humano favorito.</p>
+                                            <ul class="list-unstyled small mb-4 text-secondary">
+                                                <li><i class="bi bi-x-circle-fill text-danger me-2"></i>Solo adultos</li>
+                                                <li><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i>Alergia al pescado</li>
                                             </ul>
-                                            <p class="card-text small text-muted">Es pura energía jurásica. Ama observar por la ventana y es un romántico total cuando entra en confianza.</p>
-                                            <button class="btn btn-primary w-100 custom-btn btn-sm">Adoptarme</button>
+                                            <button class="btn custom-btn w-100 py-2 shadow-sm">Adoptarme</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="card card-michi h-100 shadow-sm border-0">
-                                        <div class="michi-img-container">
+                                    <div class="card card-michi h-100 border-0 shadow-sm hover-up">
+                                        <div class="michi-img-container overflow-hidden position-relative">
                                             <img src="https://64.media.tumblr.com/dcdac918624813046081e6f60db80d91/ce6ab0748185665b-f2/s2048x3072/1b7d1a64544bcf8f9ab187482ecbed4b6555ed13.jpg" class="card-img-top" alt="Nala">
+                                            <span class="badge position-absolute top-0 end-0 m-3 bg-white text-dark shadow-sm px-3 rounded-pill">Hembra</span>
                                         </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title-michis">Nala </h5>
-                                            <div class="mb-2">
-                                                <span class="badge badge-genero">Hembra</span>
-                                                <span class="badge badge-edad">1 año</span>
+                                        <div class="card-body p-4">
+                                            <h3 class="card-title-michis h4">Nala</h3>
+                                            <div class="mb-3">
+                                                <span class="badge badge-edad py-2 px-3">1 año</span>
+                                                <span class="badge bg-soft-danger py-2 px-3 text-dark">Juguetona</span>
                                             </div>
-                                            <ul class="list-unstyled small mb-3">
-                                                <li><i class="bi bi-person-heart"></i> <strong>Niños:si</strong> <span class="badge badge-ninos">Apto</span></li>
-                                                <li><i class="bi bi-paw"></i> <strong>Mascotas:no</strong> <span class="badge badge-mascotas">Apto perros</span></li>
-                                                <li><i class="bi bi-egg-fried"></i> <strong>Alergias:no</strong> <span class="badge badge-alergia">Ninguna</span></li>
+                                            <p class="card-text text-muted small">Nala mueve su colita como si fuera un rugido de amor. Adora jugar con plumas y cazar sombras por toda la casa.</p>
+                                            <ul class="list-unstyled small mb-4 text-secondary">
+                                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Apta para mascotas</li>
+                                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Vacunas al día</li>
                                             </ul>
-                                            <p class="card-text small text-muted">Pequeña pero valiente, Nala mueve su colita como si fuera un rugido de amor. Adora jugar con plumas.</p>
-                                            <button class="btn btn-primary w-100 custom-btn btn-sm">Adoptarme</button>
+                                            <button class="btn custom-btn w-100 py-2 shadow-sm">Adoptarme</button>
                                         </div>
                                     </div>
                                 </div>
@@ -166,269 +202,276 @@
                         </div>
 
                         <div class="carousel-item">
-                            <div class="row g-4">
+                            <div class="row g-4 px-lg-5">
                                 <div class="col-md-4">
-                                    <div class="card card-michi h-100 shadow-sm border-0">
+                                    <div class="card card-michi h-100 border-0 shadow-sm">
                                         <div class="michi-img-container">
                                             <img src="https://64.media.tumblr.com/e837f307852a6986741fe346088472e7/c26899557f6fcc13-75/s2048x3072/d06f8bb2ed689e8432998d33a8f2672bafb94a04.jpg" class="card-img-top" alt="Gandalf">
                                         </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title-michis">Gandalf </h5>
-                                            <div class="mb-2">
-                                                <span class="badge badge-genero">Macho</span>
-                                                <span class="badge badge-edad">6 años</span>
+                                        <div class="card-body p-4">
+                                            <h3 class="card-title-michis h4">Gandalf</h3>
+                                            <div class="mb-3">
+                                                <span class="badge badge-edad py-2 px-3">6 años</span>
+                                                <span class="badge bg-secondary py-2 px-3 text-white">Sabio</span>
                                             </div>
-                                            <ul class="list-unstyled small mb-3">
-                                                <li><i class="bi bi-person-heart"></i> <strong>Niños:si</strong> <span class="badge badge-ninos">Tranquilos</span></li>
-                                                <li><i class="bi bi-paw"></i> <strong>Mascotas:si</strong> <span class="badge badge-mascotas">Sí</span></li>
-                                                <li><i class="bi bi-egg-fried"></i> <strong>Alergias:piel sensible </strong> <span class="badge badge-alergia">Ninguna</span></li>
-                                            </ul>
-                                            <p class="card-text small text-muted">El guardián del refugio. Es sumamente tranquilo y siempre cuida a los michis más pequeños.</p>
-                                            <button class="btn btn-primary w-100 custom-btn btn-sm">Adoptarme</button>
+                                            <p class="card-text text-muted small">El guardián del refugio. Sumamente tranquilo, ideal para hogares que buscan un compañero de lectura y paz.</p>
+                                            <button class="btn custom-btn w-100 py-2">Adoptarme</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="card card-michi h-100 shadow-sm border-0">
+                                    <div class="card card-michi h-100 border-0 shadow-sm">
                                         <div class="michi-img-container">
                                             <img src="https://64.media.tumblr.com/0f6df573d952714a58d1fbdbf69f0e98/3ef2ab43a0e757c2-c9/s2048x3072/4854f4d72aebd1c3073eed02695ff929c2eae8c2.jpg" class="card-img-top" alt="Mochi">
                                         </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title-michis">Mochi 🍡</h5>
-                                            <div class="mb-2">
-                                                <span class="badge badge-genero">Hembra</span>
-                                                <span class="badge badge-edad">5 meses</span>
+                                        <div class="card-body p-4">
+                                            <h3 class="card-title-michis h4">Mochi 🍡</h3>
+                                            <div class="mb-3">
+                                                <span class="badge badge-edad py-2 px-3">5 meses</span>
+                                                <span class="badge bg-soft-primary py-2 px-3 text-dark">Cachorro</span>
                                             </div>
-                                            <ul class="list-unstyled small mb-3">
-                                                <li><i class="bi bi-person-heart"></i> <strong>Niños:si</strong> <span class="badge badge-ninos">Apto</span></li>
-                                                <li><i class="bi bi-paw"></i> <strong>Mascotas:si</strong> <span class="badge badge-mascotas">Muy sociable</span></li>
-                                                <li><i class="bi bi-egg-fried"></i> <strong>Alergias:no pero sufre de asma </strong> <span class="badge badge-alergia">Pollo</span></li>
-                                            </ul>
-                                            <p class="card-text small text-muted">Mochi adora las siestas al sol y los mimos infinitos. Solo busca seguridad y mucho juego.</p>
-                                            <button class="btn btn-primary w-100 custom-btn btn-sm">Adoptarme</button>
+                                            <p class="card-text text-muted small">Adora las siestas al sol y los mimos infinitos. Es sociable aunque requiere cuidados especiales por su asma.</p>
+                                            <button class="btn custom-btn w-100 py-2">Adoptarme</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    <div class="card card-michi h-100 shadow-sm border-0">
+                                    <div class="card card-michi h-100 border-0 shadow-sm">
                                         <div class="michi-img-container">
                                             <img src="https://64.media.tumblr.com/58289d13ec9347f5d62794e6e16f17ba/e9fda6beabe9e8e0-2a/s2048x3072/bd3358b33ac60509c30765a51c558997fed91e48.pnj" class="card-img-top" alt="Frodo">
                                         </div>
-                                        <div class="card-body">
-                                            <h5 class="card-title-michis">Frodo </h5>
-                                            <div class="mb-2">
-                                                <span class="badge badge-genero">Macho</span>
-                                                <span class="badge badge-edad">1.5 años</span>
+                                        <div class="card-body p-4">
+                                            <h3 class="card-title-michis h4">Frodo</h3>
+                                            <div class="mb-3">
+                                                <span class="badge badge-edad py-2 px-3">1.5 años</span>
+                                                <span class="badge bg-soft-success py-2 px-3 text-dark">Valiente</span>
                                             </div>
-                                            <ul class="list-unstyled small mb-3">
-                                                <li><i class="bi bi-person-heart"></i> <strong>Niños:si</strong> <span class="badge badge-ninos">Apto</span></li>
-                                                <li><i class="bi bi-paw"></i> <strong>Mascotas:si </strong> <span class="badge badge-mascotas">Sí</span></li>
-                                                <li><i class="bi bi-egg-fried"></i> <strong>Alergias:no</strong> <span class="badge badge-alergia">Ninguna</span></li>
-                                            </ul>
-                                            <p class="card-text small text-muted">Tiene una mirada que derrite corazones. Valiente y explorador, es el mejor compañero de aventuras.</p>
-                                            <button class="btn btn-primary w-100 custom-btn btn-sm">Adoptarme</button>
+                                            <p class="card-text text-muted small">Tiene una mirada que derrite corazones. Es el mejor compañero de aventuras para alguien que ama explorar.</p>
+                                            <button class="btn custom-btn w-100 py-2">Adoptarme</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                </div> </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#michiSlider" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                        <span class="visually-hidden">Anterior</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#michiSlider" data-bs-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                        <span class="visually-hidden">Siguiente</span>
+                    </button>
+                </div>
+            </div>
         </section>
 
-        <!--Formulario de adopción-->
- <section id="adopcion-container" class="py-5 bg-secondary-michis">
-    <div class="container">
-        <div class="row g-5"> <div class="col-lg-6">
-                <div class="card border-0 shadow-sm rounded-4 p-4 h-100">
-                    <h2 class="text-center mb-4 titulo-michis">Solicitud de Adopción 📝</h2>
-                    <p class="text-center text-muted mb-4">Completa tus datos y nos pondremos en contacto contigo.</p>
+        <section id="adopcion-container" class="py-5 bg-secondary-michis section-spacing">
+            <div class="container py-lg-5">
+                <div class="row g-5">
                     
-                    <form action="#" method="POST" class="needs-validation" novalidate>
-                        <div class="row g-3">
-                            <div class="col-md-12">
-                                <label for="nombre" class="form-label fw-bold">Nombre Completo</label>
-                                <input type="text" class="form-control rounded-pill border-michis" id="nombre" name="nombre" placeholder="Ej: Frodo Bolsón" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$" required>
-                                <div class="invalid-feedback ms-3">Solo letras, por favor.</div>
+                    <div class="col-lg-7">
+                        <div class="card border-0 shadow-lg rounded-5 p-4 p-md-5 bg-white">
+                            <h2 class="titulo-michis text-start mb-4">Solicitud de Adopción 📝</h2>
+                            <p class="text-muted mb-4">Por favor, rellena todos los campos. Los datos personales son tratados con total confidencialidad.</p>
+                            
+                            <form id="adoptionForm" class="needs-validation" novalidate>
+                                <div class="row g-4">
+                                    <div class="col-md-6">
+                                        <label for="nombre" class="form-label fw-bold">Nombre Completo</label>
+                                        <input type="text" class="form-control rounded-pill border-2" id="nombre" placeholder="Ej: Frodo Bolsón" required>
+                                        <div class="invalid-feedback">Por favor, ingresa solo letras en el nombre.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label fw-bold">Correo Electrónico</label>
+                                        <input type="email" class="form-control rounded-pill border-2" id="email" placeholder="michi@amor.com" required>
+                                        <div class="invalid-feedback">Ingresa un correo electrónico válido.</div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="region" class="form-label fw-bold">Región</label>
+                                        <select class="form-select rounded-pill border-2" id="region" required>
+                                            <option value="" selected disabled>Selecciona...</option>
+                                            <option>Metropolitana</option>
+                                            <option>Valparaíso</option>
+                                            <option>Maule</option>
+                                            <option>Biobío</option>
+                                            <option>La Araucanía</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="ciudad" class="form-label fw-bold">Ciudad</label>
+                                        <input type="text" class="form-control rounded-pill border-2" id="ciudad" placeholder="Ej: Viña del Mar" required>
+                                        <div class="invalid-feedback">Por favor, ingresa solo letras en la ciudad.</div>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="michiSelected" class="form-label fw-bold">¿A quién quieres adoptar?</label>
+                                        <select class="form-select rounded-pill border-2" id="michiSelected" required>
+                                            <option value="" selected disabled>Elige a tu nuevo mejor amigo...</option>
+                                            <option>Cleo</option>
+                                            <option>Simba</option>
+                                            <option>Nala</option>
+                                            <option>Gandalf</option>
+                                            <option>Mochi</option>
+                                            <option>Frodo</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="motivo" class="form-label fw-bold">¿Por qué deseas adoptar un gatito?</label>
+                                        <textarea class="form-control border-2 rounded-4" id="motivo" rows="4" placeholder="Cuéntanos un poco sobre tu hogar y tu experiencia..." required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="terminos" required>
+                                            <label class="form-check-label small text-muted" for="terminos">
+                                                Acepto que cuento con mallas de seguridad y me comprometo a una tenencia responsable.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 mt-4">
+                                        <button type="submit" class="btn custom-btn btn-lg w-100 rounded-pill shadow">Enviar Solicitud <i class="bi bi-send-fill ms-2"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-5">
+                        <div class="ps-lg-4">
+                            <h2 class="titulo-michis text-start mb-4 display-5">¿Cómo Adoptar? 🐾</h2>
+                            <p class="mb-5 text-muted">Adoptar es un acto de amor, pero también una gran responsabilidad. Sigue estos pasos para completar el proceso con éxito:</p>
+                            
+                            <div class="accordion accordion-flush shadow rounded-5 overflow-hidden border" id="accordionProceso">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#paso1">
+                                            <span class="badge bg-michis me-3">1</span> ¡Conoce a los Michis!
+                                        </button>
+                                    </h2>
+                                    <div id="paso1" class="accordion-collapse collapse" data-bs-parent="#accordionProceso">
+                                        <div class="accordion-body text-muted lh-base">
+                                            Explora nuestra galería de gatos en adopción. Cada uno tiene una historia y una personalidad única. Tómate tu tiempo para ver quién encaja mejor con tu estilo de vida.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#paso2">
+                                            <span class="badge bg-michis me-3">2</span> Rellena el Formulario
+                                        </button>
+                                    </h2>
+                                    <div id="paso2" class="accordion-collapse collapse" data-bs-parent="#accordionProceso">
+                                        <div class="accordion-body text-muted lh-base">
+                                            Una vez que encuentres a tu michi ideal, completa nuestro formulario de pre-adopción online. Esto nos ayuda a conocerte mejor y a asegurar la mejor coincidencia para ambos.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#paso3">
+                                            <span class="badge bg-michis me-3">3</span> Entrevista y Visita
+                                        </button>
+                                    </h2>
+                                    <div id="paso3" class="accordion-collapse collapse" data-bs-parent="#accordionProceso">
+                                        <div class="accordion-body text-muted lh-base">
+                                            Nos pondremos en contacto contigo para una breve entrevista. Luego, coordinaremos una visita a tu hogar para asegurar que el ambiente sea 100% seguro (mallas de seguridad obligatorias).
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed fw-bold py-4" type="button" data-bs-toggle="collapse" data-bs-target="#paso4">
+                                            <span class="badge bg-michis me-3">4</span> ¡Bienvenido a Casa!
+                                        </button>
+                                    </h2>
+                                    <div id="paso4" class="accordion-collapse collapse" data-bs-parent="#accordionProceso">
+                                        <div class="accordion-body text-muted lh-base">
+                                            ¡Felicidades! Tu michi está listo para ir a casa. Te daremos todas las indicaciones veterinarias y consejos para una adaptación exitosa. ¡A disfrutar del amor felino!
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-md-12">
-                                <label for="correo" class="form-label fw-bold">Correo Electrónico</label>
-                                <input type="email" class="form-control rounded-pill border-michis" id="correo" name="correo" placeholder="example@correo.com" required>
-                                <div class="invalid-feedback ms-3">Correo inválido.</div>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label for="region" class="form-label fw-bold">Región</label>
-                                <select class="form-select rounded-pill border-michis" id="region" name="region" required>
-                                    <option value="" selected disabled>Selecciona tu región...</option>
-                                    <option value="arica">Región de Arica y Parinacota</option>
-                                    <option value="tarapaca">Región de Tarapacá</option>
-                                    <option value="antofagasta">Región de Antofagasta</option>
-                                    <option value="atacama">Región de Atacama</option>
-                                    <option value="coquimbo">Región de Coquimbo</option>
-                                    <option value="valparaiso">Región de Valparaíso</option>
-                                    <option value="metropolitana">Región Metropolitana</option>
-                                    <option value="ohiggins">Región de O'Higgins</option>
-                                    <option value="maule">Región del Maule</option>
-                                    <option value="nuble">Región del Ñuble</option>
-                                    <option value="biobio">Región del Biobío</option>
-                                    <option value="araucania">Región de la Araucanía</option>
-                                    <option value="rios">Región de los Ríos</option>
-                                    <option value="lagos">Región de los Lagos</option>
-                                    <option value="aysen">Región de Aysén</option>
-                                    <option value="magallanes">Región de Magallanes</option> </select>
-                                    </select>
-                            </div>
-
-                            <div class="col-md-6">
-                                <label for="ciudad" class="form-label fw-bold">Ciudad</label>
-                                <input type="text" class="form-control rounded-pill border-michis" id="ciudad" name="ciudad" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$" required>
-                            </div>
-
-                            <div class="col-md-12">
-                                <label for="michi-interes" class="form-label fw-bold">¿A quién quieres adoptar?</label>
-                                <select class="form-select rounded-pill border-michis" id="michi-interes" name="michi-interes" required>
-                                    <option value="" selected disabled>Selecciona un gatito...</option>
-                                    <option value="cleo">Cleo</option>
-                                    <option value="simba">Simba</option>
-                                    <option value="nala">Nala</option>
-                                    <option value="gandalf">Gandalf</option>
-                                    <option value="mochi">Mochi</option>
-                                    <option value="frodo">Frodo</option>
-                                    </select>
-                            </div>
-
-                            <div class="col-12 text-center mt-4">
-                                <button type="submit" class="btn custom-btn btn-lg px-5 rounded-pill shadow-sm">
-                                    Enviar Solicitud <i class="bi bi-send ms-2"></i>
-                                </button>
+                            <div class="mt-5 p-4 bg-white rounded-5 shadow-sm border">
+                                <h4 class="h5 fw-bold mb-3"><i class="bi bi-shield-check text-success me-2"></i> Requisitos Clave</h4>
+                                <ul class="list-group list-group-flush small">
+                                    <li class="list-group-item border-0"><i class="bi bi-dot me-2"></i>Ser mayor de 21 años.</li>
+                                    <li class="list-group-item border-0"><i class="bi bi-dot me-2"></i>Mallas de seguridad en ventanas.</li>
+                                    <li class="list-group-item border-0"><i class="bi bi-dot me-2"></i>Estabilidad para gastos veterinarios.</li>
+                                </ul>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
-            <div class="col-lg-6">
-                <div class="h-100 p-2">
-                    <h2 class="mb-4 titulo-michis">¿Cómo Adoptar? 🐾</h2>
-                    <p class="text-muted mb-4">Sigue estos pasos para darle un nuevo hogar a un pequeño compañero.</p>
-
-                        <div class="accordion accordion-flush" id="accordionAdopcion">
-                            <div class="accordion-item card-michis mb-3 shadow-sm rounded-3">
-                                <h2 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed titulo-michis" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                        Paso 1: ¡Conoce a los Michis!
-                                    </button>
-                                </h2>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionAdopcion">
-                                    <div class="accordion-body">
-                                        Explora nuestra galería de gatos en adopción. Cada uno tiene una historia y una personalidad única. Tómate tu tiempo para ver quién te roba el corazón.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item card-michis mb-3 shadow-sm rounded-3">
-                                <h2 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed titulo-michis" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                        Paso 2: Rellena el Formulario de Solicitud
-                                    </button>
-                                </h2>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionAdopcion">
-                                    <div class="accordion-body">
-                                        Una vez que encuentres a tu michi ideal, completa nuestro formulario de pre-adopción online. Esto nos ayuda a conocerte mejor y a asegurar la mejor coincidencia.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item card-michis mb-3 shadow-sm rounded-3">
-                                <h2 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed titulo-michis" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                        Paso 3: Entrevista y Visita Domiciliaria
-                                    </button>
-                                </h2>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionAdopcion">
-                                    <div class="accordion-body">
-                                        Nos pondremos en contacto contigo para una entrevista. Luego, coordinaremos una visita a tu hogar para asegurar que el ambiente sea seguro y adecuado para el michi.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="accordion-item card-michis mb-3 shadow-sm rounded-3">
-                                <h2 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed titulo-michis" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                        Paso 4: ¡Bienvenido a Casa!
-                                    </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionAdopcion">
-                                    <div class="accordion-body">
-                                        Una vez aprobada tu solicitud, ¡felicidades! Tu michi está listo para ir a casa. Te daremos todas las indicaciones y consejos para una adaptación exitosa.
-                                    </div>
-                                </div>
-                            </div>
-
-             <div class="mt-4"></div>
-                     <h4 class="mt-4 titulo-michis h5"><i class="bi bi-check2-circle me-2"></i>Requisitos Clave</h4>
-                     <ul class="list-group list-group-flush shadow-sm rounded-4 overflow-hidden mt-3">
-                        <li class="list-group-item border-michis-soft"><i class="bi bi-person-check me-2"></i> Ser mayor de 21 años.</li>
-                        <li class="list-group-item border-michis-soft"><i class="bi bi-house-heart me-2"></i> Mallas de seguridad en ventanas.</li>
-                        <li class="list-group-item border-michis-soft"><i class="bi bi-cash-stack me-2"></i> Estabilidad para gastos veterinarios.</li>
-                        <li class="list-group-item border-michis-soft"><i class="bi bi-heart-pulse me-2"></i> Compromiso de amor eterno.</li>
-                    </ul>
-                    
-                    <div class="alert alert-info mt-4 rounded-4 border-0 shadow-sm" role="alert">
-                        <i class="bi bi-info-circle-fill me-2"></i>
-                        Recuerda que la adopción es un acto de responsabilidad para toda la vida.
-                    </div>
                     </div>
                 </div>
             </div>
+        </section>
+    </main>
 
-        </div>
-     </div> 
-    </section>
-
-
-  <footer class="footer-michis py-5 mt-5">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4 text-center text-md-start">
-                    <a class="logo-michis-footer mb-3 d-inline-block text-decoration-none" href="#inicio">
-                        <span class="icon-cat"></span> El Señor de los Michis
-                    </a>
-                    <p class="small text-white-50">Refugio dedicado a dar una segunda oportunidad a los felinos.</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-link me-2"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="social-link me-2"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
+    <footer class="footer-michis py-5 bg-dark text-white overflow-hidden">
+        <div class="container py-lg-4">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <h5 class="logo-michis-footer mb-4 fs-3">El Señor de los Michis</h5>
+                    <p class="text-white-50 lh-lg">Dando una segunda oportunidad a los pequeños reyes de la casa. Nuestra labor es posible gracias a personas como tú.</p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="social-icon"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-tiktok fs-4"></i></a>
                     </div>
                 </div>
-
-                <div class="col-md-4 text-center text-md-start">
-                   
-                    <ul class="list-unstyled">
-                        <li><a href="#inicio" class="footer-link text-decoration-none">Inicio</a></li>
-                        <li><a href="#adopta-aqui" class="footer-link text-decoration-none">Adopta</a></li>
-                        <li><a href="#hogar-temporal" class="footer-link text-decoration-none">Hogar Temporal</a></li>
-                        <li><a href="#voluntariado" class="footer-link text-decoration-none">Voluntariado</a></li>
-                        <li><a href="#nuestra-historia" class="footer-link text-decoration-none">Nuestra Historia</a></li>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white fw-bold mb-4">Navegación</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#inicio" class="text-white-50 text-decoration-none">Inicio</a></li>
+                        <li class="mb-2"><a href="#nuestra-historia" class="text-white-50 text-decoration-none">Historia</a></li>
+                        <li class="mb-2"><a href="#adopta-aqui" class="text-white-50 text-decoration-none">Adoptar</a></li>
                     </ul>
                 </div>
-
-                <div class="col-md-4 text-center text-md-start">
-                    <h5 class="text-white mb-3">Contacto</h5>
-                    <p class="text-white-50 mb-1"><i class="bi bi-geo-alt-fill me-2"></i>Calle Ronroneo 123, Ciudad Michi.</p>
-                    <p class="text-white-50 mb-1"><i class="bi bi-telephone-fill me-2"></i>+56 9 8765 4321</p>
-                    <p class="text-white-50"><i class="bi bi-envelope-fill me-2"></i>contacto@elsenordelosmichis.cl</p>
+                <div class="col-6 col-lg-2">
+                    <h6 class="text-white fw-bold mb-4">Ayuda</h6>
+                    <ul class="list-unstyled footer-links">
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Hogar Temporal</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Donar</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50 text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h6 class="text-white fw-bold mb-4">Donde Estamos</h6>
+                    <p class="text-white-50 small mb-2"><i class="bi bi-geo-alt-fill me-2"></i> Calle Ronroneo 123, Ciudad Michi, Chile.</p>
+                    <p class="text-white-50 small mb-2"><i class="bi bi-envelope-at-fill me-2"></i> contacto@elsenordelosmichis.cl</p>
+                    <p class="text-white-50 small"><i class="bi bi-telephone-fill me-2"></i> +56 9 1234 5678</p>
                 </div>
             </div>
-            <hr class="mt-4 border-white-50">
-            <p class="text-center text-white-50 mb-0">© 2026 El Señor de los Michis by chikisaurias malvadas y asociadas © Todos los derechos reservados.</p>
+            <hr class="my-5 border-white-50 opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="text-white-50 small mb-0">© 2026 El Señor de los Michis. Todos los derechos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    <p class="text-white-50 small mb-0">by Chikisaurias Malvadas y asociadas .</p>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <button id="scrollToTopBtn" class="btn btn-primary rounded-circle shadow-lg" aria-label="Volver al inicio">
-        <i class="bi bi-arrow-up"></i>
+    <button id="scrollToTopBtn" class="btn btn-primary rounded-circle shadow-lg border-0" title="Volver arriba" style="display: none;">
+        <i class="bi bi-arrow-up fs-4"></i>
     </button>
 
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="michiToast" class="toast align-items-center text-white bg-success border-0 shadow-lg" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+               <div class="toast-body fs-6 fw-bold">
+             💖 empaquetando michi  para su entrega 🐾
+            </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    
+            <script src="assets/js/scripts.js"></script>
+
 </body>
-</html>   
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voluntariado | El Senor de los Michis 🐾</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        /* 1. FUENTE PERSONALIZADA */
+        @font-face {
+            font-family: 'CatMeow';
+            src: url('./assets/fonts/cat_ttf.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --michi-purple-deep: #6b5ca5;
+            --michi-violet: #b8a4e3;
+            --michi-lavender: #efe9ff;
+            --michi-bg-soft: #fcfaff;
+            --michi-dark-footer: #3f3566;
+            --michi-hover-bg: rgba(184, 164, 227, 0.18);
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: var(--michi-bg-soft);
+            color: var(--michi-dark-footer);
+        }
+
+        h1, h2, h3, h4, .navbar-brand {
+            font-family: 'Comfortaa', sans-serif;
+            font-weight: 700;
+        }
+
+        .fuente-michi-nombre {
+            font-family: 'CatMeow', 'Comfortaa', sans-serif !important;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+            line-height: 1.4;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .navbar-michis {
+            background-color: #ffffff;
+            padding: 0.8rem 0;
+            border-bottom: 2px solid var(--michi-lavender);
+            box-shadow: 0 4px 15px rgba(184, 164, 227, 0.15);
+        }
+
+        .navbar-brand .fuente-michi-nombre {
+            color: var(--michi-purple-deep) !important;
+        }
+
+        .nav-link {
+            color: var(--michi-purple-deep);
+            font-weight: 600;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            color: var(--michi-violet) !important;
+            background-color: var(--michi-hover-bg);
+        }
+
+        .titulo-michis { color: #7c6bb3; margin-bottom: 1.5rem; }
+
+        .bg-light-michi {
+            background-color: white;
+            border: 2px dashed var(--michi-lavender);
+            border-radius: 20px;
+        }
+
+        .card {
+            border-radius: 20px;
+            border: none;
+            box-shadow: 0 8px 25px rgba(184, 164, 227, 0.18);
+        }
+
+        .custom-btn {
+            background-color: #c7b6f5;
+            color: #3f3566;
+            border-radius: 50px;
+            padding: 12px;
+            font-weight: 600;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .custom-btn:hover {
+            background-color: #b19cf0;
+            transform: translateY(-2px);
+        }
+
+        .footer-michis {
+            background-color: #4b3f7a;
+            color: #f3efff;
+        }
+
+        .footer-link { color: #b39ddb; text-decoration: none; transition: 0.3s; }
+        .footer-link:hover { color: white; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-michis sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <span class="me-2">🐾</span>
+                <span class="fuente-michi-nombre">El Senor de los Michis</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto text-center">
+                    <li class="nav-item"><a class="nav-link mx-1" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link mx-1" href="index.html#adopta-aqui">Adopta</a></li>
+                    <li class="nav-item"><a class="nav-link mx-1 active" href="voluntariado.html">Voluntariado</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-5">
+                <h2 class="titulo-michis">Sé parte del equipo 🐈‍⬛</h2>
+                <p class="lead">Ser voluntario es aportar tu granito de arena para que ningún michi pase hambre o soledad.</p>
+                <div class="bg-light-michi p-4 shadow-sm mb-4">
+                    <h5 class="fw-bold" style="color: var(--michi-violet);"><i class="bi bi-heart-fill me-2"></i>¿Cómo puedes ayudar?</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2">🤝 Ayuda en jornadas de adopción.</li>
+                        <li class="mb-2">📸 Fotografía y difusión en redes.</li>
+                        <li class="mb-2">🚗 Traslado de michis a veterinarios.</li>
+                        <li class="mb-2">📦 Organización de colectas de alimento.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <div class="card p-4 shadow-lg">
+                    <h4 class="mb-4 fw-bold" style="color: var(--michi-purple-deep);">Formulario de Voluntariado</h4>
+                    
+                    <form id="formVoluntario" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Nombre Completo</label>
+                            <input type="text" class="form-control rounded-pill" id="nombre" required
+                                   pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$" 
+                                   placeholder="Solo letras">
+                            <div class="invalid-feedback">Por favor, ingresa un nombre válido (sin números).</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Correo Electrónico</label>
+                            <input type="email" class="form-control rounded-pill" id="correo" required 
+                                   placeholder="nombre@example.com">
+                            <div class="invalid-feedback">Usa un formato de correo válido.</div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Teléfono</label>
+                                <input type="tel" class="form-control rounded-pill" id="telefono" required placeholder="+56 9...">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label fw-bold">Región</label>
+                                <select class="form-select rounded-pill" id="region" required>
+                                    <option value="">Selecciona...</option>
+                                    <option value="metropolitana">Región Metropolitana</option>
+                                    <option value="valparaiso">Región de Valparaíso</option>
+                                    </select>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn custom-btn w-100 mt-3">¡Quiero ser voluntario!</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="bi bi-exclamation-circle me-2"></i> 
+                    Revisa los datos: el nombre no permite números y el correo debe ser válido.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-michis py-5 mt-5">
+        <div class="container text-center text-md-start">
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <h5 class="text-white mb-3">🐾 <span class="fuente-michi-nombre">El Senor de los Michis</span></h5>
+                    <p class="small">Dando segundas oportunidades desde 2026.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p class="small mb-1"><i class="bi bi-envelope me-2"></i>contacto@elsenordelosmichis.cl</p>
+                    <p class="text-center small mb-0 opacity-50 mt-4">© 2026 El Señor de los Michis.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Lógica de validación y Toast
+        (() => {
+            'use strict'
+            const form = document.getElementById('formVoluntario');
+            const toastLiveExample = document.getElementById('liveToast');
+            const toast = new bootstrap.Toast(toastLiveExample);
+
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    toast.show(); // Muestra el aviso si hay error
+                } else {
+                    event.preventDefault();
+                    alert('¡Miau-ravilloso! Gracias por querer ser voluntario.');
+                    form.reset();
+                    form.classList.remove('was-validated');
+                }
+                form.classList.add('was-validated');
+            }, false);
+        })()
+    </script>
+</body>
+</html>
